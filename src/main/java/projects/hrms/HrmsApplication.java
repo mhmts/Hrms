@@ -1,9 +1,9 @@
 package projects.hrms;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -22,10 +22,13 @@ public class HrmsApplication {
 	 @Bean
 	    public Docket api() { 
 	        return new Docket(DocumentationType.SWAGGER_2)  
-	          .select()                                  
-	          .apis(RequestHandlerSelectors.basePackage("projects.hrms"))              
-	          .paths(PathSelectors.any())                          
-	          .build();                                           
-	    }
+	          .select()    
+                
+                .apis(RequestHandlerSelectors.basePackage("projects.hrms"))      
+             
+                .paths(PathSelectors.any())                          
+  	          .build();                                           
+  	    }
 
-}
+  }
+
